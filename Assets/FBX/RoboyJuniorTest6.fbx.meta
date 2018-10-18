@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 0d742c2fe50053148ab469d9312358ef
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Head
+    100004: Head_end
+    100006: LeftClav
+    100008: LeftFoot
+    100010: LeftHand
+    100012: LeftHand_end
+    100014: LeftLowerArm
+    100016: LeftShank
+    100018: LeftThigh
+    100020: LeftToe
+    100022: LeftToe_end
+    100024: LeftUpperArm
+    100026: LowerBack
+    100028: RightClav
+    100030: RightFoot
+    100032: RightHand
+    100034: RightHand_end
+    100036: RightLowerArm
+    100038: RightShank
+    100040: RightThigh
+    100042: RightToe
+    100044: RightToe_end
+    100046: RightUpperArm
+    100048: RoboyJunior
+    100050: //RootNode
+    100052: Root
+    100054: Torso
+    400000: Armature
+    400002: Head
+    400004: Head_end
+    400006: LeftClav
+    400008: LeftFoot
+    400010: LeftHand
+    400012: LeftHand_end
+    400014: LeftLowerArm
+    400016: LeftShank
+    400018: LeftThigh
+    400020: LeftToe
+    400022: LeftToe_end
+    400024: LeftUpperArm
+    400026: LowerBack
+    400028: RightClav
+    400030: RightFoot
+    400032: RightHand
+    400034: RightHand_end
+    400036: RightLowerArm
+    400038: RightShank
+    400040: RightThigh
+    400042: RightToe
+    400044: RightToe_end
+    400046: RightUpperArm
+    400048: RoboyJunior
+    400050: //RootNode
+    400052: Root
+    400054: Torso
+    2100000: RoboyBodyMaterial
+    2100002: EyeMaterial.001
+    4300000: RoboyJunior
+    9500000: //RootNode
+    13700000: RoboyJunior
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeMaterial.001
+    second: {fileID: 2100000, guid: 4dd09b407a4a96746a747c97d1c5cfe3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoboyBodyMaterial
+    second: {fileID: 2100000, guid: 6e7ea56fca14d894680c1eed2a08f47f, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
