@@ -50,13 +50,9 @@ namespace ROSBridge
         /// </summary>
         private void Awake()
         {
+            ROSCoreIP = System.IO.File.ReadAllText("ros_ip.txt");
 
-            if (ROSCoreIP.Equals(""))
-            {
-                ROSCoreIP = Resources.Load("ros_ip", typeof(TextAsset)).ToString();
-            }
-
-            Debug.Log("ROSCoreIP is: " + ROSCoreIP);
+            Debug.Log("ROSCoreIP is " + ROSCoreIP);
 
             m_ROS = new ROSBridgeWebSocketConnection("ws://" + ROSCoreIP, Port);
 
