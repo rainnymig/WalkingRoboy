@@ -11,24 +11,25 @@ namespace RoboyWalk
 
         public new static string GetMessageTopic()
         {
-            return "/roboy_cmd";
+            return "/roboy/material";
         }
 
         public new static string GetMessageType()
         {
-            return RoboyCommandMsg.GetMessageType();
+            return StringMsg.GetMessageType();
         }
 
         public new static ROSBridgeMsg ParseMessage(JSONNode msg)
         {
-            return new RoboyCommandMsg(msg);
+            return new StringMsg(msg);
         }
 
         public static new void CallBack(ROSBridgeMsg msg)
         {
-            RoboyCommandMsg rbm = (RoboyCommandMsg)msg;
-            GroundsManager.Instance.SwitchGround(rbm.GetContent());
+            StringMsg strMsg = (StringMsg)msg;
+            GroundsManager.Instance.SwitchGround(strMsg.GetData());
             GroundsManager.Instance.ResetScene();
+            UIManager.Instance.ShowInfo(strMsg.GetData());
         }
     }
 }

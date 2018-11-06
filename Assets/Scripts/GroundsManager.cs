@@ -7,11 +7,12 @@ namespace RoboyWalk
 {
     public class GroundsManager : Singleton<GroundsManager>
     {
-        public KeyCode GrassKey;
-        public KeyCode IceKey;
+        public KeyCode CarpetKey;
+        public KeyCode StoneKey;
         public KeyCode MetalKey;
         public KeyCode RubberKey;
         public KeyCode WoodKey;
+        public KeyCode CorkKey;
         public KeyCode ResetKey;
 
         public CameraController CamController;
@@ -26,23 +27,25 @@ namespace RoboyWalk
 
         private GameObject m_Roboy;
 
-        private const string GRASS = "grass";
-        private const string ICE = "ice";
+        private const string CARPET = "carpet";
+        private const string STONE = "stone";
         private const string METAL = "metal";
         private const string RUBBER = "rubber";
         private const string WOOD = "wood";
+        private const string CORK = "cork";
 
         private void Awake()
         {
             m_GroundUnitDict = new Dictionary<string, GameObject>();
-            m_GroundUnitDict.Add(GRASS, m_GroundUnitPrefabs[0]);
-            m_GroundUnitDict.Add(ICE, m_GroundUnitPrefabs[1]);
+            m_GroundUnitDict.Add(CARPET, m_GroundUnitPrefabs[0]);
+            m_GroundUnitDict.Add(STONE, m_GroundUnitPrefabs[1]);
             m_GroundUnitDict.Add(METAL, m_GroundUnitPrefabs[2]);
             m_GroundUnitDict.Add(RUBBER, m_GroundUnitPrefabs[3]);
             m_GroundUnitDict.Add(WOOD, m_GroundUnitPrefabs[4]);
+            m_GroundUnitDict.Add(CORK, m_GroundUnitPrefabs[5]);
 
             m_CurrentGroundUnit = m_GroundUnitDict[RUBBER];
-            UIManager.Instance.ShowInfo("Rubber");
+            UIManager.Instance.ShowInfo(RUBBER);
         }
 
         private void Start()
@@ -52,35 +55,41 @@ namespace RoboyWalk
 
         private void Update()
         {
-            if (Input.GetKeyDown(GrassKey))
+            if (Input.GetKeyDown(CarpetKey))
             {
-                SwitchGround(GRASS);
+                SwitchGround(CARPET);
                 ResetScene();
-                UIManager.Instance.ShowInfo("Grass");
+                UIManager.Instance.ShowInfo(CARPET);
             }
-            if (Input.GetKeyDown(IceKey))
+            if (Input.GetKeyDown(StoneKey))
             {
-                SwitchGround(ICE);
+                SwitchGround(STONE);
                 ResetScene();
-                UIManager.Instance.ShowInfo("Ice");
+                UIManager.Instance.ShowInfo(STONE);
             }
             if (Input.GetKeyDown(MetalKey))
             {
                 SwitchGround(METAL);
                 ResetScene();
-                UIManager.Instance.ShowInfo("Metal");
+                UIManager.Instance.ShowInfo(METAL);
             }
             if (Input.GetKeyDown(RubberKey))
             {
                 SwitchGround(RUBBER);
                 ResetScene();
-                UIManager.Instance.ShowInfo("Rubber");
+                UIManager.Instance.ShowInfo(RUBBER);
             }
             if (Input.GetKeyDown(WoodKey))
             {
                 SwitchGround(WOOD);
                 ResetScene();
-                UIManager.Instance.ShowInfo("Wood");
+                UIManager.Instance.ShowInfo(WOOD);
+            }
+            if (Input.GetKeyDown(CorkKey))
+            {
+                SwitchGround(CORK);
+                ResetScene();
+                UIManager.Instance.ShowInfo(CORK);
             }
             if (Input.GetKeyDown(ResetKey))
             {

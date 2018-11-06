@@ -352,3 +352,5 @@ __pycache__/
 build/
 ProjectSettings/ProjectVersion.txt
 ProjectSettings/ProjectVersion.txt
+
+Build_Linux/

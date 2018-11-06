@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.36966884, g: 0.7757685, b: 0.5876898, a: 1}
+  m_IndirectSpecularColor: {r: 0.4679315, g: 0.4800639, b: 0.39771885, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,7 +246,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.74
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -325,6 +325,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23883362825214112, guid: 4febbcfb3e172084f93eae4d43ae4454,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ec15e6a9f3d4ba441865ab189d34ad9f, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4febbcfb3e172084f93eae4d43ae4454, type: 2}
   m_IsPrefabAsset: 0
@@ -1252,11 +1257,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a3bcd2d7f201a42b9823649e786c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrassKey: 97
-  IceKey: 115
+  CarpetKey: 97
+  StoneKey: 115
   MetalKey: 100
   RubberKey: 102
   WoodKey: 103
+  CorkKey: 104
   ResetKey: 114
   CamController: {fileID: 1891063009}
   m_GroundUnitPrefabs:
@@ -1265,6 +1271,7 @@ MonoBehaviour:
   - {fileID: 1561120820272474, guid: 3226962335f16834fad04c52dc88adf3, type: 2}
   - {fileID: 1442604537977286, guid: 66daf256203018f4e85c5b83391da06f, type: 2}
   - {fileID: 1814586393760260, guid: 9a03ea107bf25f742be64771679f6a3d, type: 2}
+  - {fileID: 1814586393760260, guid: d0bd5de7c48fed641be7c0ccefefef4e, type: 2}
   m_RoboyPrefab: {fileID: 1487303755317834, guid: 3ede7b687f0aa634fbd2f9bcdea0f490,
     type: 2}
 --- !u!114 &2058758984
