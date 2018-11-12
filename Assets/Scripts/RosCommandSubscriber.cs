@@ -27,9 +27,7 @@ namespace RoboyWalk
         public static new void CallBack(ROSBridgeMsg msg)
         {
             StringMsg strMsg = (StringMsg)msg;
-            GroundsManager.Instance.SwitchGround(strMsg.GetData());
-            GroundsManager.Instance.ResetScene();
-            UIManager.Instance.ShowInfo(strMsg.GetData());
+            GroundsManager.Instance.ChangeGround(strMsg.GetData());
         }
     }
 }

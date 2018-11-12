@@ -13,6 +13,7 @@ namespace RoboyWalk
         public KeyCode RubberKey;
         public KeyCode WoodKey;
         public KeyCode CorkKey;
+        public KeyCode FeltKey;
         public KeyCode ResetKey;
 
         public CameraController CamController;
@@ -33,6 +34,7 @@ namespace RoboyWalk
         private const string RUBBER = "rubber";
         private const string WOOD = "wood";
         private const string CORK = "cork";
+        private const string FELT = "felt";
 
         private void Awake()
         {
@@ -43,6 +45,7 @@ namespace RoboyWalk
             m_GroundUnitDict.Add(RUBBER, m_GroundUnitPrefabs[3]);
             m_GroundUnitDict.Add(WOOD, m_GroundUnitPrefabs[4]);
             m_GroundUnitDict.Add(CORK, m_GroundUnitPrefabs[5]);
+            m_GroundUnitDict.Add(FELT, m_GroundUnitPrefabs[6]);
 
             m_CurrentGroundUnit = m_GroundUnitDict[RUBBER];
             UIManager.Instance.ShowInfo(RUBBER);
@@ -57,43 +60,45 @@ namespace RoboyWalk
         {
             if (Input.GetKeyDown(CarpetKey))
             {
-                SwitchGround(CARPET);
-                ResetScene();
-                UIManager.Instance.ShowInfo(CARPET);
+                ChangeGround(CARPET);
             }
             if (Input.GetKeyDown(StoneKey))
             {
-                SwitchGround(STONE);
-                ResetScene();
-                UIManager.Instance.ShowInfo(STONE);
+                ChangeGround(STONE);
             }
             if (Input.GetKeyDown(MetalKey))
             {
-                SwitchGround(METAL);
-                ResetScene();
-                UIManager.Instance.ShowInfo(METAL);
+                ChangeGround(METAL);
             }
             if (Input.GetKeyDown(RubberKey))
             {
-                SwitchGround(RUBBER);
-                ResetScene();
-                UIManager.Instance.ShowInfo(RUBBER);
+                ChangeGround(RUBBER);
             }
             if (Input.GetKeyDown(WoodKey))
             {
-                SwitchGround(WOOD);
-                ResetScene();
-                UIManager.Instance.ShowInfo(WOOD);
+                ChangeGround(WOOD);
             }
             if (Input.GetKeyDown(CorkKey))
             {
-                SwitchGround(CORK);
-                ResetScene();
-                UIManager.Instance.ShowInfo(CORK);
+                ChangeGround(CORK);
+            }
+            if (Input.GetKeyDown(FeltKey))
+            {
+                ChangeGround(FELT);
             }
             if (Input.GetKeyDown(ResetKey))
             {
                 ResetScene();
+            }
+        }
+
+        public void ChangeGround(string groundName)
+        {
+            if (m_GroundUnitDict.ContainsKey(groundName))
+            {
+                SwitchGround(groundName);
+                ResetScene();
+                UIManager.Instance.ShowInfo(groundName);
             }
         }
 
